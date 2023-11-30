@@ -1,2 +1,5 @@
-package com.dai.config;public class Mail {
+package com.dai.config;
+
+public record Mail(String subject, String body) {
+
 }

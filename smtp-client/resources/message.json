@@ -1,0 +1,80 @@
+{
+  "emails": [
+    {
+      "subject": "Réunion d'équipe",
+      "body": "Chers collègues,\n\nNous aurons une réunion d'équipe demain à 10h dans la salle de conférence. Merci de préparer vos mises à jour et vos questions.\n\nCordialement,\n[Votre Nom]"
+    },
+    {
+      "subject": "Invitation à un événement",
+      "body": "Cher(e) [Nom],\n\nVous êtes cordialement invité(e) à notre événement spécial qui aura lieu le [date] à [lieu]. Nous serions ravis de vous compter parmi nous.\n\nBien à vous,\n[L'organisateur]"
+    },
+    {
+      "subject": "Confirmation de commande",
+      "body": "Bonjour,\n\nNous vous confirmons que votre commande #[numéro] a bien été traitée. Vous pouvez suivre l'état de votre livraison en utilisant le lien suivant : [lien de suivi].\n\nCordialement,\n[L'équipe de support]"
+    },
+    {
+      "subject": "Annonce importante",
+      "body": "Chers utilisateurs,\n\nNous avons une annonce importante à partager avec vous. Veuillez consulter notre site Web pour plus de détails.\n\nCordialement,\n[L'équipe]"
+    },
+    {
+      "subject": "Mot de passe oublié",
+      "body": "Bonjour [Nom],\n\nVous avez demandé une réinitialisation de votre mot de passe. Veuillez utiliser le lien suivant pour définir un nouveau mot de passe : [lien de réinitialisation].\n\nCordialement,\n[L'équipe de sécurité]"
+    },
+    {
+      "subject": "Remerciements",
+      "body": "Cher(e) [Nom],\n\nNous tenons à exprimer notre gratitude pour votre contribution exceptionnelle. Votre travail a un impact significatif.\n\nMerci,\n[L'équipe]"
+    },
+    {
+      "subject": "Offre spéciale",
+      "body": "Cher client,\n\nProfitez de notre offre spéciale valable jusqu'au [date]. Ne manquez pas cette opportunité exclusive.\n\nMeilleures salutations,\n[L'équipe commerciale]"
+    },
+    {
+      "subject": "Problème technique résolu",
+      "body": "Cher utilisateur,\n\nNous sommes heureux de vous informer que le problème technique que vous avez signalé a été résolu. Merci de votre patience.\n\nCordialement,\n[L'équipe de support]"
+    },
+    {
+      "subject": "Invitation à un sondage",
+      "body": "Cher(e) [Nom],\n\nNous vous invitons à participer à notre sondage client pour nous aider à améliorer nos services. Votre opinion est précieuse.\n\nCordialement,\n[L'équipe de recherche]"
+    },
+    {
+      "subject": "Nouvelle fonctionnalité",
+      "body": "Bonjour,\n\nNous sommes ravis de vous annoncer la sortie de notre nouvelle fonctionnalité. Découvrez comment elle peut améliorer votre expérience utilisateur.\n\nMeilleures salutations,\n[L'équipe de développement]"
+    },
+    {
+      "subject": "Avis de paiement",
+      "body": "Cher client,\n\nCeci est un avis de paiement. Votre facture #[numéro] d'un montant de [montant] est maintenant due. Veuillez effectuer le paiement dès que possible.\n\nCordialement,\n[L'équipe financière]"
+    },
+    {
+      "subject": "Newsletter mensuelle",
+      "body": "Chers abonnés,\n\nBienvenue dans notre newsletter mensuelle. Restez informés des dernières actualités, mises à jour et offres spéciales.\n\nMeilleures salutations,\n[L'équipe éditoriale]"
+    },
+    {
+      "subject": "Offre d'emploi",
+      "body": "Cher(e) candidat(e),\n\nNous avons le plaisir de vous informer que vous avez été présélectionné(e) pour le poste [titre]. Veuillez trouver les détails ci-joints.\n\nCordialement,\n[L'équipe des ressources humaines]"
+    },
+    {
+      "subject": "Erreur de facturation",
+      "body": "Cher client,\n\nNous avons identifié une erreur dans votre facture. Veuillez nous excuser pour tout inconvénient. La correction sera apportée dès que possible.\n\nCordialement,\n[L'équipe de facturation]"
+    },
+    {
+      "subject": "Mise à jour de politique",
+      "body": "Chers utilisateurs,\n\nNous avons mis à jour notre politique de confidentialité. Veuillez consulter les modifications sur notre site Web.\n\nCordialement,\n[L'équipe juridique]"
+    },
+    {
+      "subject": "Remboursement traité",
+      "body": "Bonjour,\n\nNous vous informons que votre demande de remboursement a été traitée avec succès. Vous recevrez le montant dans les prochains jours ouvrables.\n\nCordialement,\n[L'équipe de remboursement]"
+    },
+    {
+      "subject": "Annonce de produit",
+      "body": "Chers clients,\n\nNous sommes ravis de vous présenter notre nouveau produit révolutionnaire. Découvrez ses fonctionnalités incroyables dès aujourd'hui.\n\nMeilleures salutations,\n[L'équipe marketing]"
+    },
+    {
+      "subject": "Prochain webinaire",
+      "body": "Cher(e) participant(e),\n\nNous vous invitons à notre prochain webinaire sur [sujet]. Inscrivez-vous dès maintenant pour réserver votre place.\n\nCordialement,\n[L'organisateur du webinaire]"
+    },
+    {
+      "subject": "Avis de livraison",
+      "body": "Cher client,\n\nNous sommes heureux de vous informer que votre colis #[numéro] a été expédié. Suivez l'état de la livraison en utilisant le lien de suivi ci-dessous.\n\nCordialement,\n[L'équipe logistique]"
+    }
+  ]
+}
