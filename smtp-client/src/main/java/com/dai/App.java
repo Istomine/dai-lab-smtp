@@ -6,6 +6,7 @@ import com.dai.config.Mail;
 import com.dai.config.Message;
 import com.dai.SmtpClient.*;
 
+import javax.management.BadAttributeValueExpException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,13 +17,19 @@ import java.util.ArrayList;
  */
 public class App 
 {
-    public static void main( String[] args ) throws IOException {
+    public static void main( String[] args ){
 
-        Address addr = new Address("./smtp-client/resources/email.json");
+        if(args.length != 3){
+            throw new IllegalArgumentException("Le programme nécessite exactement 4 arguments.");
+        }
 
-        Message mess = new Message("./smtp-client/resources/message.json");
+        Address addr = new Address(args[1]);
 
+        Message mess = new Message(args[2]);
 
+        Integer nbGroup = Integer.valueOf(args[3]);
+
+/*
         ArrayList<String> mails = addr.getEmailsAddress();
         ArrayList<Mail> messages = mess.getMails();
 
@@ -34,7 +41,7 @@ public class App
         }
 
 
-
+*/
 
 
     }
