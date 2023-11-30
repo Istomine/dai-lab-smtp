@@ -4,6 +4,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 
 import static java.nio.file.Files.readString;
@@ -13,7 +14,7 @@ public class JsonParser {
 
     public JsonParser(String path){
         try {
-            fileContent = readString(Paths.get(path));
+            fileContent = readString(Paths.get(path), StandardCharsets.UTF_8);
         }catch (IOException e){
             System.out.println("Error while reading file : " + e.toString());
         }
