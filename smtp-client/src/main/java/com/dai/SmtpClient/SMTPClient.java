@@ -1,4 +1,4 @@
-package com.heigvdcorp.app;
+package com.dai.SmtpClient;
 
 import java.io.*;
 import java.net.Socket;
@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Base64;
 
-class SMTPClient{
+public class SMTPClient{
 
     private String from;
 
@@ -33,7 +33,7 @@ class SMTPClient{
      * @param port The port number to be used for communication with the SMTP server.
      *
      */
-    SMTPClient(String from, ArrayList<String> to,String ip, int port){
+    public SMTPClient(String from, ArrayList<String> to,String ip, int port){
         this.from = from;
         this.to = to;
         this.ip = ip;
