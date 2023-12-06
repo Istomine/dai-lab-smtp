@@ -1,4 +1,15 @@
-<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>440</y><w>190</w><h>95</h></coordinates><panel_attributes>SMTPClient
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>441</y>
+      <w>342</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>SMTPClient
 --
 - from : String
 - to : ArrayList&lt;String&gt;
@@ -9,7 +20,18 @@
 --
 + SMTPClient(String, ArrayList&lt;String&gt;,String, int)
 - writeServer(String) : void
-+ send(String,String) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>335</y><w>160</w><h>85</h></coordinates><panel_attributes>GroupManager
++ send(String,String) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>252</y>
+      <w>288</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>GroupManager
 --
 ~ addresses : ArrayList&lt;String&gt;
 ~ groups : ArrayList&lt;ArrayList&lt;String&gt;&gt; 
@@ -19,52 +41,198 @@
 + GroupManager(ArrayList&lt;String&gt;, int)
 + getSender(int) : String
 + getReceiver(int) : ArrayList&lt;String&gt;
-+ toPrint() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>375</y><w>115</w><h>45</h></coordinates><panel_attributes>Message
++ toPrint() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>936</x>
+      <y>324</y>
+      <w>207</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Message
 --
 ~ jsonObject : JSONObject
 --
 + Message(String)
-+ getMails() : ArrayList&lt;Mail&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>255</y><w>85</w><h>45</h></coordinates><panel_attributes>Mail
++ getMails() : ArrayList&lt;Mail&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>972</x>
+      <y>108</y>
+      <w>153</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Mail
 --
 + subject : String
 + body : String
 --
-This is a java record</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>405</x><y>275</y><w>120</w><h>45</h></coordinates><panel_attributes>JsonParser
+This is a java record</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>144</y>
+      <w>216</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>JsonParser
 --
 - fileContent : String
 --
 + JsonParser(String)
-+ loadJsonObject() : JSONObject</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>385</x><y>355</y><w>160</w><h>65</h></coordinates><panel_attributes>Address
++ loadJsonObject() : JSONObject</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>639</x>
+      <y>288</y>
+      <w>288</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Address
 --
 _- EMAIL_REGEX : String_
 ~ emails : JSONObject
 --
 + Address(String)
 - checkAddressValid(String email) : Boolean
-+ getEmailsAddress() : ArrayList&lt;String&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>550</y><w>70</w><h>30</h></coordinates><panel_attributes>App
++ getEmailsAddress() : ArrayList&lt;String&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>558</x>
+      <y>639</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>App
 --
-_+ main : void_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>405</x><y>415</y><w>95</w><h>155</h></coordinates><panel_attributes>lt=&lt;-
+_+ main : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>396</y>
+      <w>180</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
 m1=0..n
 m2=0..1
-charge ^</panel_attributes><additional_attributes>120;10;120;280;10;280</additional_attributes></element><element><id>Relation</id><coordinates><x>285</x><y>415</y><w>65</w><h>165</h></coordinates><panel_attributes>lt=&lt;-
+charge ^</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;280.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>396</y>
+      <w>126</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
 m1=0..n
 m2=0..1
-transmet mail ^</panel_attributes><additional_attributes>10;10;10;300;110;300</additional_attributes></element><element><id>Relation</id><coordinates><x>405</x><y>415</y><w>225</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+transmet mail ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0;110.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>396</y>
+      <w>414</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
 m1=0..n
 m2=0..1
-charge ^</panel_attributes><additional_attributes>410;10;410;310;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>605</x><y>295</y><w>35</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+charge ^</panel_attributes>
+    <additional_attributes>410.0;10.0;410.0;310.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1035</x>
+      <y>180</y>
+      <w>81</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
 m1=1..n
 m2=*
-utilise ^</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>395</x><y>270</y><w>340</w><h>350</h></coordinates><panel_attributes>lt=&lt;-
+utilise ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>135</y>
+      <w>630</w>
+      <h>630</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
 m1=1..n
 m2=*
-utilise ^</panel_attributes><additional_attributes>520;10;620;10;620;680;10;680;10;620</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>530</y><w>275</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+utilise ^</panel_attributes>
+    <additional_attributes>520.0;10.0;620.0;10.0;620.0;680.0;10.0;680.0;10.0;620.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>603</y>
+      <w>504</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
 m1=0..n
 m2=*
-envois mail &lt;</panel_attributes><additional_attributes>10;10;10;160;530;160;530;100</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>315</y><w>40</w><h>50</h></coordinates><panel_attributes>est utilisé
-lt=&lt;&lt;-
+envois mail &lt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;530.0;160.0;530.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>774</x>
+      <y>216</y>
+      <w>99</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>est utilisé v
+lt=-&gt;
 m1=1
-m2=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>290</y><w>85</w><h>95</h></coordinates><panel_attributes>est utilisé
-lt=&lt;&lt;-
+m2=1</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>171</y>
+      <w>162</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>est utilisé &gt;
+lt=-&gt;
 m1=1
-m2=2</panel_attributes><additional_attributes>150;170;10;10</additional_attributes></element></diagram>
+m2=2</panel_attributes>
+    <additional_attributes>150.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
