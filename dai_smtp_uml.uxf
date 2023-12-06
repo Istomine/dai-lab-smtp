@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>440</y>
+      <w>190</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>SMTPClient
+--
+- from : String
+- to : ArrayList&lt;String&gt;
+- ip : String
+- PORT : int
+- reader : BufferedReader
+- writer : BufferedWriter
+--
++ SMTPClient(String, ArrayList&lt;String&gt;,String, int)
+- writeServer(String) : void
++ send(String,String) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>335</y>
+      <w>160</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>GroupManager
+--
+~ addresses : ArrayList&lt;String&gt;
+~ groups : ArrayList&lt;ArrayList&lt;String&gt;&gt; 
+~ nbGroup : int
+~ nbPersonPerGroup : int
+--
++ GroupManager(ArrayList&lt;String&gt;, int)
++ getSender(int) : String
++ getReceiver(int) : ArrayList&lt;String&gt;
++ toPrint() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>375</y>
+      <w>115</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Message
+--
+~ jsonObject : JSONObject
+--
++ Message(String)
++ getMails() : ArrayList&lt;Mail&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>255</y>
+      <w>85</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Mail
+--
++ subject : String
++ body : String
+--
+This is a java record</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>345</x>
+      <y>200</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>JsonParser
+--
+- fileContent : String
+--
++ JsonParser(String)
++ loadJsonObject() : JSONObject</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>355</y>
+      <w>160</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>Address
+--
+_- EMAIL_REGEX : String_
+~ emails : JSONObject
+--
++ Address(String)
+- checkAddressValid(String email) : Boolean
++ getEmailsAddress() : ArrayList&lt;String&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>550</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>App
+--
+_+ main : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>415</y>
+      <w>100</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+m2=0..1
+charge ^</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;280.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>285</x>
+      <y>415</y>
+      <w>70</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+m2=0..1
+transmet mail ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0;110.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>415</y>
+      <w>230</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+m2=0..1
+charge ^</panel_attributes>
+    <additional_attributes>410.0;10.0;410.0;310.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>605</x>
+      <y>295</y>
+      <w>45</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..n
+m2=*
+utilise ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>395</x>
+      <y>270</y>
+      <w>350</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..n
+m2=*
+utilise ^</panel_attributes>
+    <additional_attributes>520.0;10.0;620.0;10.0;620.0;680.0;10.0;680.0;10.0;620.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>530</y>
+      <w>280</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+m2=*
+envois mail &lt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;530.0;160.0;530.0;100.0</additional_attributes>
+  </element>
+</diagram>
