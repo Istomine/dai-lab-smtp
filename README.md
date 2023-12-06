@@ -2,9 +2,32 @@
 
 ## Serveur Mock
 
+Pour lancer le serveur mock nous utilisons MailDev qui est un serveur de test smtp
+
+Pour le lancer vous pouvez utiliser docker en lancant la commande suivante
+
+```bash
+docker run -d -p 1080:1080 -p 1025:1025 maildev/maildev
+```
+
 ## Fonctionnement 
 
+### JsonParser
+
+Json parser une la classe qui va nous permettre de wrapper la librairie org.JSON de maven pour pouvoir l'utiliser plus simplement. Cette classe consiste juste a lire le fichier json et le parser et retourner l'objet parsé qui sera utilisé dans les autres classe
+
+### Addresse
+
+Cette classe permet de parser le contenu du fichier de configuration pour repertorier les addresses mail. Il utilise la classe JSONParser pour parser le fichier puis retourne un tableau contenant toute les addresses mail
+
+### Message
+
+Cette classe permet de passer l'autre fichier de configuration. Celui des messages des mails "blague". Il renvoie aussi un tableau de record Mail qui contiennent eux meme l'objet et le body du mail.
+
 ### GroupManager
+
+Cette classe permet de créer les groupes d'envoi et de recuperer les differents acteur des groupes. On peut demander a recuperer l'addresse de l'envoyeur et on peut aussi demander a recuperer toutes les addresses des receveur
+
 ### SMTPClient
 
 La classe SMTPClient est une implémentation en Java d'un client SMTP (Simple Mail Transfer Protocol), qui permet d'envoyer des courriers électroniques en utilisant le protocole SMTP via un serveur. Voici une explication détaillée de son fonctionnement :
@@ -36,7 +59,6 @@ La classe capture les exceptions d'E/S (IOException) et affiche un message gén�
 En résumé, cette classe permet d'automatiser l'envoi de courriers électroniques en utilisant le protocole SMTP. Elle peut être utilisée en fournissant les informations nécessaires, telles que l'expéditeur, les destinataires, le serveur SMTP, et le port, puis en appelant la méthode send avec le sujet et le contenu du courrier électronique à envoyer.
 
 ### Config
-### App.java
 
 ## Configuration et utilisation
 
@@ -62,4 +84,22 @@ Vous pouvez rajouter autant d'addresse mail que vous le voulez
 > [!WARNING]  
 > Toutes vos addresses doivent etre valide. Sinon elles ne seront pas comptée
 
-## Exemple d'échange
+### Message
+
+Pour configurer des nouveaux message respecter la structure json suivante
+```json
+{
+  "emails": [
+    {
+      "subject": "Réunion d'équipe",
+      "body": "Chers collègues,\n\nNous aurons une réunion d'équipe demain à 10h dans la salle de conférence. Merci de préparer vos mises à jour et vos questions.\n\nCordialement,\n[Votre Nom]"
+    }
+  ]
+}
+
+```
+On peut ajouter plusieurs objets dans le tableau emails qui doit contenir un subject et un body.
+
+### Nombre de groups
+
+Le nombre de groupe peut etre passé en ligne de commande en appelant le programme
