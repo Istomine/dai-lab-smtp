@@ -35,9 +35,31 @@ La classe capture les exceptions d'E/S (IOException) et affiche un message gén�
 
 En résumé, cette classe permet d'automatiser l'envoi de courriers électroniques en utilisant le protocole SMTP. Elle peut être utilisée en fournissant les informations nécessaires, telles que l'expéditeur, les destinataires, le serveur SMTP, et le port, puis en appelant la méthode send avec le sujet et le contenu du courrier électronique à envoyer.
 
-### config
+### Config
 ### App.java
 
 ## Configuration et utilisation
+
+Pour utiliser notre application on peut configurer 3 choses
+- La pool d'addresse mail
+- Les messages qu'on peut envoyé
+- Le nombre de groupe créé
+
+### Pool d'addresse mail
+
+Pour ajouter ou supprimer des addresses il faut editer le fichier `/resources/email.json` qui suit la structure suivante
+```json
+{
+  "adresses_emails": [
+    "addresse1@addresse.com",
+    "addresse2@addresse.com",
+  ]
+}
+
+```
+Vous pouvez rajouter autant d'addresse mail que vous le voulez
+
+> [!WARNING]  
+> Toutes vos addresses doivent etre valide. Sinon elles ne seront pas comptée
 
 ## Exemple d'échange
