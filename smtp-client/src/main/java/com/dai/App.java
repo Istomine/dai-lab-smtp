@@ -43,11 +43,6 @@ public class App
         }catch (Exception e){
             System.out.println("An error has occured ! : " + e);
         }
-
-
-
-
-
-
+        
     }
 }
