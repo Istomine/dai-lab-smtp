@@ -8,16 +8,34 @@ import java.util.Base64;
 
 public class SMTPClient{
 
+    /**
+     * The email address of the sender.
+     */
     private String from;
 
+    /**
+     * The list of email addresses of the recipients.
+     */
     private ArrayList<String> to;
 
+    /**
+     * The IP address of the SMTP server.
+     */
     private String ip;
 
+    /**
+     * The port number for the SMTP server.
+     */
     private final int PORT;
 
+    /**
+     * Reader for reading responses from the SMTP server.
+     */
     private BufferedReader reader;
 
+    /**
+     * Writer for sending commands to the SMTP server.
+     */
     private BufferedWriter writer;
 
     /**
