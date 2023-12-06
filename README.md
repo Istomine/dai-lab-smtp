@@ -103,3 +103,12 @@ On peut ajouter plusieurs objets dans le tableau emails qui doit contenir un sub
 ### Nombre de groups
 
 Le nombre de groupe peut etre passé en ligne de commande en appelant le programme
+
+## Utilisation
+
+La commande doit s'effectué au niveau du pom.xml et permet de lancer l'envois de mail
+
+```bash
+mvn compile exec:java -Dexec.mainClass="com.dai.App" -Dexec.args=""CHEMIN_VERS_MAIL" "CHEMIN_VERS_MESSAGE" NB_GROUPE"
+```
+
