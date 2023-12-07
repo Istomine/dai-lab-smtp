@@ -117,3 +117,6 @@ La commande doit s'effectué au niveau du fichier .jar
 java -jar smtp-client-1.0-SNAPSHOT-jar-with-dependencies.jar "FICHIER_MAIL" "FICHIER_MESSAGE" NB_GROUPE
 ```
 
+## UML
+
+![UML](uml.png)
