@@ -106,9 +106,14 @@ Le nombre de groupe peut etre passé en ligne de commande en appelant le program
 
 ## Utilisation
 
-La commande doit s'effectué au niveau du pom.xml et permet de lancer l'envois de mail
+Pour compiler la code, il faut utilisé la commande 
+```bash
+mvn clean compile assembly:single 
+```
+
+La commande doit s'effectué au niveau du fichier .jar
 
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.dai.App" -Dexec.args=""CHEMIN_VERS_MAIL" "CHEMIN_VERS_MESSAGE" NB_GROUPE"
+java -jar smtp-client-1.0-SNAPSHOT-jar-with-dependencies.jar "FICHIER_MAIL" "FICHIER_MESSAGE" NB_GROUPE
 ```
 
